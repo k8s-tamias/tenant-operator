@@ -1,3 +1,4 @@
 vendor/
 sample-operator/sample-operator
 sample-operator/vendor/
+/.project

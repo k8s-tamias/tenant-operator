@@ -1,10 +1,7 @@
 
-## Kubernetes Operator Kit
+## Tenant Operator For Kubernetes
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frook%2Foperator-kit.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frook%2Foperator-kit?ref=badge_shield)
-
-A Kubernetes Operator is a controller for custom resources. The purpose of the operator kit is to provide a common
-library for implementing operators.
+The Tenant Operator is a controler for Kubernetes which allows the definition of quotas and restrictions for groups of users within a Kubernetes cluster. These quotas may span multiple namespaces, thus providing an extension to the isolation of users and quotas which is part of the core kubernetes system. 
 
 The library originated from the Rook operator but is independent. Much more thought needs to be put into API design, but at least provides the basis for the library with working code.
 

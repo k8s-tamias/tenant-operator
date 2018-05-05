@@ -52,5 +52,4 @@ For detailed contribution instructions, refer to the [development flow](Document
 
 ## Coding Style
 
-The operator kit is written in golang and follows the style guidelines dictated by
-the go fmt as well as go vet tools.
+The tenant operator is written in golang and follows the style guidelines dictated by the go fmt as well as go vet tools.
