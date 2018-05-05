@@ -1,0 +1,60 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: tenants.tamias.io
+spec:
+  group: tamias.io
+  version: v1alpha1
+  scope: Cluster
+  names:
+    plural: tenants
+    singular: tenant
+    kind: Tenant
+    shortNames:
+    - ten
+validation:
+   # openAPIV3Schema is the schema for validating custom objects.
+    openAPIV3Schema:
+      properties:
+        spec:
+          properties:
+            namespaces:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  externalName:
+                    type: string
+                required:
+                - name
+            quotas:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    Enum:
+                      - cores
+                      - mem
+                      - requests
+                      - objects
+                  max:
+                    Type: string
+                  maxSum:
+                    type: string
+                required:
+                  - type
+            users:
+              type: array
+              item:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  roles:
+                    type: array
+                    items:
+                      type: string
